@@ -10,12 +10,20 @@ namespace ALGA
     {
         public static void quicksort(ISortList list)
         {
-            throw new NotImplementedException();
+            if (list == null || list.Count <= 1) return;
+            quicksort(list, 0, list.Count - 1);
         }
 
         private static void quicksort(ISortList list, int leftIndex, int rightIndex)
         {
-            throw new NotImplementedException();
+            if (leftIndex >= rightIndex) return;
+
+            int pivotIndex = leftIndex;
+
+            int newPivotIndex = partition(list, pivotIndex, leftIndex, rightIndex);
+
+            quicksort(list, leftIndex, newPivotIndex - 1);
+            quicksort(list, newPivotIndex + 1, rightIndex);
         }
 
         /**
@@ -34,7 +42,23 @@ namespace ALGA
          */
         public static int partition(ISortList list, int pivotIndex, int leftIndex, int rightIndex)
         {
-            throw new NotImplementedException();
+            if (pivotIndex != rightIndex)
+                list.swap(pivotIndex, rightIndex);
+
+            int store = leftIndex;
+
+            for (int i = leftIndex; i < rightIndex; i++)
+            {
+                if (list.compare(i, rightIndex) < 0)
+                {
+                    if (i != store) list.swap(i, store);
+                    store++;
+                }
+            }
+
+            if (store != rightIndex) list.swap(store, rightIndex);
+
+            return store;
         }
     }
 }

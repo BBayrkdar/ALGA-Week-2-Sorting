@@ -19,35 +19,45 @@
   </tr>
   <tr>
     <th>Aantal vergelijkingen</th>
-    <td>  <!-- Vergelijkingen Quicksort gesorteerd --></td>
-    <td>  <!-- Vergelijkingen Quicksort geshuffled --></td>
-    <td>  <!-- Vergelijkingen Quicksort3 gesorteerd --></td>
-    <td>  <!-- Vergelijkingen Quicksort3 geshuffled --></td>
-    <td>  <!-- Vergelijkingen Mergesort gesorteerd --></td>
-    <td>  <!-- Vergelijkingen Mergesort geshuffled --></td>
-    <td>  <!-- Vergelijkingen Bubblesort gesorteerd --></td>
-    <td>  <!-- Vergelijkingen Bubblesort geshuffled --></td>
+    <td>499 500  <!-- Vergelijkingen Quicksort gesorteerd --></td>
+    <td>11 066  <!-- Vergelijkingen Quicksort geshuffled --></td>
+    <td>1506  <!-- Vergelijkingen Quicksort3 gesorteerd --></td>
+    <td>1997  <!-- Vergelijkingen Quicksort3 geshuffled --></td>
+    <td>0  <!-- Vergelijkingen Mergesort gesorteerd --></td>
+    <td>0  <!-- Vergelijkingen Mergesort geshuffled --></td>
+    <td>499500  <!-- Vergelijkingen Bubblesort gesorteerd --></td>
+    <td>495955  <!-- Vergelijkingen Bubblesort geshuffled --></td>
   </tr>
   <tr>
     <th>Aantal swaps</th>
-    <td>  <!-- Swaps Quicksort gesorteerd --></td>
-    <td>  <!-- Swaps Quicksort geshuffled --></td>
-    <td>  <!-- Swaps Quicksort3 gesorteerd --></td>
-    <td>  <!-- Swaps Quicksort3 geshuffled --></td>
-    <td>  <!-- Swaps Mergesort gesorteerd --></td>
-    <td>  <!-- Swaps Mergesort geshuffled --></td>
-    <td>  <!-- Swaps Bubblesort gesorteerd --></td>
-    <td>  <!-- Swaps Bubblesort geshuffled --></td>
+    <td>1498  <!-- Swaps Quicksort gesorteerd --></td>
+    <td>5212  <!-- Swaps Quicksort geshuffled --></td>
+    <td>1001  <!-- Swaps Quicksort3 gesorteerd --></td>
+    <td>1003  <!-- Swaps Quicksort3 geshuffled --></td>
+    <td>0 *  <!-- Swaps Mergesort gesorteerd --></td>
+    <td>0 *  <!-- Swaps Mergesort geshuffled --></td>
+    <td>499500  <!-- Swaps Bubblesort gesorteerd --></td>
+    <td>244380  <!-- Swaps Bubblesort geshuffled --></td>
   </tr>
   <tr>
     <th>Uitvoertijd</th>
-    <td>  <!-- Uitvoertijd Quicksort gesorteerd --></td>
-    <td>  <!-- Uitvoertijd Quicksort geshuffled --></td>
-    <td>  <!-- Uitvoertijd Quicksort3 gesorteerd --></td>
-    <td>  <!-- Uitvoertijd Quicksort3 geshuffled --></td>
-    <td>  <!-- Uitvoertijd Mergesort gesorteerd --></td>
-    <td>  <!-- Uitvoertijd Mergesort geshuffled --></td>
-    <td>  <!-- Uitvoertijd Bubblesort gesorteerd --></td>
-    <td>  <!-- Uitvoertijd Bubblesort geshuffled --></td>
+    <td>>0.015706s  <!-- Uitvoertijd Quicksort gesorteerd --></td>
+    <td>0.000663s  <!-- Uitvoertijd Quicksort geshuffled --></td>
+    <td>0.000099s  <!-- Uitvoertijd Quicksort3 gesorteerd --></td>
+    <td>0.000153s  <!-- Uitvoertijd Quicksort3 geshuffled --></td>
+    <td>0.000378s  <!-- Uitvoertijd Mergesort gesorteerd --></td>
+    <td>0.000411s  <!-- Uitvoertijd Mergesort geshuffled --></td>
+    <td>0.035885s  <!-- Uitvoertijd Bubblesort gesorteerd --></td>
+    <td>0.028117s  <!-- Uitvoertijd Bubblesort geshuffled --></td>
   </tr>
 </table>
+
+---
+
+*Opmerking:*
+* bij Mergesort telt de functie ook “writes” naar hulparrays als swaps. De SortList-counters zien alleen writes naar de list zelf, daarom staat swaps hier op 0.
+
+* Als dat moet meegenomen, kan de “Sets” gerapporteerd worden (in deze meting: Gets = 9 976, Sets = 9 976 voor beide Mergesort cases).
+
+Results Reference
+![Results reference](image.png)

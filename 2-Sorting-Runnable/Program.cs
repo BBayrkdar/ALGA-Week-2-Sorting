@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _2_Sorting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,13 @@ namespace ALGA
     {
         static void Main(string[] args)
         {
-            SortList list = new SortList(10);
-            Quicksort.quicksort(list);
-            Console.WriteLine(list);
-            Console.ReadLine();
+            //SortList list = new SortList(10);
+            //Quicksort.quicksort(list);
+            //Console.WriteLine(list);
+            //Console.ReadLine();
+
+            SortBench.RunAll();
+
         }
     }
 }
